@@ -157,7 +157,7 @@ class TemplateEngineJade extends TemplateEngine implements Module, ConfigurableM
             'summary' => 'Jade templates for the TemplateEngineFactory',
             'version' => 100,
             'author' => 'Diktus Dreibholz (dreerr)',
-            'href' => 'https://processwire.com/talk/####',
+            'href' => 'https://processwire.com/talk/topic/11386-module-jade-for-the-templateenginefactory/',
             'singular' => false,
             'autoload' => false,
             'requires' => array('TemplateEngineFactory'),
