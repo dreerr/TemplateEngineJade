@@ -191,7 +191,7 @@ class TemplateEngineJade extends TemplateEngine implements Module, ConfigurableM
         /** @var InputfieldCheckbox $f */
         $f = $modules->get('InputfieldCheckbox');
         $f->label = __('Output indented HTML');
-        $f->description = __('Output rendered templates as pretty and indented HTML');
+        $f->description = __('Output rendered templates as indented HTML');
         $f->name = 'prettyprint';
         if ($data['prettyprint']) $f->checked = 1;
         $wrapper->append($f);

@@ -14,3 +14,4 @@ After installing, don't forget to enable Jade as engine in the TemplateEngineFac
 * **Path to templates** Path to folder where you want to store your Jade template files.
 * **Template files suffix** The suffix of the template files, default is *jade*.
 * **Import ProcessWire API variables in Jade template** If checked, any API variable is accessible inside the Jade templates, for example *page* refers to the current page.
+* **Output indented HTML** If checked, the output is rendered as indented HTML.
