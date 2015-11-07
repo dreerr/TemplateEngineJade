@@ -56,7 +56,7 @@ class TemplateEngineJade extends TemplateEngine implements Module, ConfigurableM
     public function initEngine()
     {
         $this->jade = new Jade\Jade(array(
-            'prettyprint' => true,
+            'prettyprint' => (bool)$this->getConfig('prettyprint'),
             'extension' => '.' . $this->getConfig('template_files_suffix'),
             'cache' => $this->wire('config')->paths->assets . 'cache/' . self::COMPILE_DIR
         ));
@@ -78,6 +78,7 @@ class TemplateEngineJade extends TemplateEngine implements Module, ConfigurableM
         $config = parent::getDefaultConfig();
         return array_merge($config, array(
             'template_files_suffix' => 'jade',
+            'prettyprint' => 1,
             'api_vars_available' => 1
         ));
     }
@@ -185,6 +186,14 @@ class TemplateEngineJade extends TemplateEngine implements Module, ConfigurableM
         $f->description = __('All API variables (page, input, config etc.) are accessible in Jade, e.g. page for $page');
         $f->name = 'api_vars_available';
         if ($data['api_vars_available']) $f->checked = 1;
+        $wrapper->append($f);
+
+        /** @var InputfieldCheckbox $f */
+        $f = $modules->get('InputfieldCheckbox');
+        $f->label = __('Output indented HTML');
+        $f->description = __('Output rendered templates as pretty and indented HTML');
+        $f->name = 'prettyprint';
+        if ($data['prettyprint']) $f->checked = 1;
         $wrapper->append($f);
 
         return $wrapper;
