@@ -56,7 +56,7 @@ class TemplateEngineJade extends TemplateEngine implements Module, ConfigurableM
     public function initEngine()
     {
         $this->jade = new Jade\Jade(array(
-            'prettyprint' => (bool)$this->getConfig('prettyprint'),
+            'prettyprint' => $this->getConfig('prettyprint'),
             'extension' => '.' . $this->getConfig('template_files_suffix'),
             'cache' => $this->wire('config')->paths->assets . 'cache/' . self::COMPILE_DIR
         ));
