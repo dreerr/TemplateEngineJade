@@ -3,7 +3,8 @@ namespace Jade;
 $srcPath = dirname(__FILE__) . '/jade-php/src/';
 spl_autoload_register(function($class) use($srcPath) {
     if (! strstr($class, 'Jade')) return;
-    include($srcPath . str_replace("\\", DIRECTORY_SEPARATOR, $class) . '.php');
+    $c = str_replace("\\", DIRECTORY_SEPARATOR, $class);
+    include $srcPath . $c . '.php';
 });
 
 class UnescapedCompiler extends Compiler {
