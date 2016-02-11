@@ -4,7 +4,7 @@
  *
  * @author Diktus Dreibholz <dreerr@gmail.com>
  * @license http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License, version 2
- * @version 1.0.3
+ * @version 1.0.4
  *
  * ProcessWire 2.x
  * Copyright (C) 2014 by Ryan Cramer
@@ -158,7 +158,7 @@ class TemplateEngineJade extends TemplateEngine implements Module, ConfigurableM
         return array(
             'title' => 'Template Engine Jade',
             'summary' => 'Jade templates for the TemplateEngineFactory',
-            'version' => 103,
+            'version' => 104,
             'author' => 'Diktus Dreibholz (dreerr)',
             'href' => 'https://processwire.com/talk/topic/11386-module-jade-for-the-templateenginefactory/',
             'singular' => false,
