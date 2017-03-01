@@ -1,3 +1,8 @@
+# 👻 Depreciated 👻 
+## Please use [TemplateEnginePug](https://github.com/dreerr/TemplateEnginePug) instead!
+#  
+#  
+
 TemplateEngineJade
 ==================
 
